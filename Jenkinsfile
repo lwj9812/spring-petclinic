@@ -94,7 +94,7 @@ stage('Codedeploy Workload') {
                 sh '''
                     aws deploy create-deployment-group \
                     --application-name std01-code-deploy \
-                    --auto-scaling-groups std01-asg \
+                    --auto-scaling-groups std01-asg-target \
                     --deployment-group-name std01-code-deploy-${BUILD_NUMBER} \
                     --deployment-config-name CodeDeployDefault.OneAtATime \
                     --service-role-arn arn:aws:iam::257307634175:role/std01-codedeploy-service-role
