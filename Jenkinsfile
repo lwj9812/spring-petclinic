@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        jdk "jdk17"
+        jdk "JDK17"
         maven "M3"
     }
     
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Git Clone'
                 git url: 'https://github.com/lwj9812/spring-petclinic.git',
-                branch: 'efficient-webjars', credentiald: 'GitCredential'
+                branch: 'efficient-webjars', credentiald: 'GitCredentials'
             }
             post {
                 success {
